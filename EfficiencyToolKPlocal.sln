@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfficiencyToolKPlocal", "EfficiencyToolKPlocal.csproj", "{11E138D7-0FF2-4BF0-922D-206AB5E9E1A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NEWefficiencyTool", "..\NEWefficiencyTool\NEWefficiencyTool.csproj", "{E7E8D652-D22C-47B1-A482-FA84D1DCC572}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{11E138D7-0FF2-4BF0-922D-206AB5E9E1A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11E138D7-0FF2-4BF0-922D-206AB5E9E1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11E138D7-0FF2-4BF0-922D-206AB5E9E1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11E138D7-0FF2-4BF0-922D-206AB5E9E1A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7E8D652-D22C-47B1-A482-FA84D1DCC572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7E8D652-D22C-47B1-A482-FA84D1DCC572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7E8D652-D22C-47B1-A482-FA84D1DCC572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7E8D652-D22C-47B1-A482-FA84D1DCC572}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
