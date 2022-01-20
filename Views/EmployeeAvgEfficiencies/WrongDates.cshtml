@@ -1,0 +1,17 @@
+﻿
+@model NEWefficiencyTool.ModelsDB.EmployeeAvgEfficiency
+@{
+    ViewData["Title"] = "WrongDates";
+}
+@*This view is displayed if the user enters dates in the wrong order*@
+<h1>Wrong dates</h1>
+<h4>You have entered dates in the wrong order.</h4>
+
+<div>
+    <a asp-action="CreateEfficienciesView">Try again</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,42 @@
+﻿@model NEWefficiencyTool.ModelsDB.Worklog
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Worklog</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WorklogDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WorklogDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TimeSpent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TimeSpent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Employee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Employee.EmployeeId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Task)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Task.TaskId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.WorklogId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

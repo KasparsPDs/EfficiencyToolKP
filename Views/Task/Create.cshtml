@@ -1,0 +1,71 @@
+﻿@model NEWefficiencyTool.ModelsDB.Task
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Task</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TaskId" class="control-label"></label>
+                <input asp-for="TaskId" class="form-control" />
+                <span asp-validation-for="TaskId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaskName" class="control-label"></label>
+                <input asp-for="TaskName" class="form-control" />
+                <span asp-validation-for="TaskName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReporterId" class="control-label"></label>
+                <select asp-for="ReporterId" class ="form-control" asp-items="ViewBag.Reporter"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="AsigneeId" class="control-label"></label>
+                <select asp-for="AsigneeId" class ="form-control" asp-items="ViewBag.Asignee"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectKey" class="control-label"></label>
+                <select asp-for="ProjectKey" class ="form-control" asp-items="ViewBag.ProjectKey"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstimatedTime" class="control-label"></label>
+                <input asp-for="EstimatedTime" class="form-control" />
+                <span asp-validation-for="EstimatedTime" class="text-danger"></span>
+            </div>
+            @*This property is automatically filled out during a new task record creation*@
+            @*<div class="form-group">
+                <label asp-for="ElapsedTime" class="control-label"></label>
+                <input asp-for="ElapsedTime" class="form-control" />
+                <span asp-validation-for="ElapsedTime" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Done" class="control-label"></label>
+                <input asp-for="Done" class="form-control"/>
+                <span asp-validation-for="Done" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DoneDate" class="control-label"></label>
+                <input asp-for="DoneDate" class="form-control" />
+                <span asp-validation-for="DoneDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

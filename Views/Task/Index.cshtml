@@ -1,0 +1,79 @@
+﻿@model IEnumerable<NEWefficiencyTool.ModelsDB.Task>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Tasks</h1>
+
+<p>
+    <a asp-action="Create">Create New</a> |
+    <a asp-action="CreateEfficiencies" asp-controller="TaskEmployeeEfficiencies">Calculate Task Efficiency</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TaskName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstimatedTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ElapsedTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Done)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DoneDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asignee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectKeyNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reporter)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskId)
+                @Html.DisplayFor(modelItem => item.TaskName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstimatedTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ElapsedTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Done)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoneDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Asignee.FirstLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectKeyNavigation.ProjectKey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reporter.FirstLastName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TaskId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TaskId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TaskId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

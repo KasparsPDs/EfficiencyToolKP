@@ -1,0 +1,49 @@
+﻿@model NEWefficiencyTool.ModelsDB.EmployeeAvgEfficiency
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>EmployeeAvgEfficiency</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <h4>Wrong link</h4>
+        @*Automatically generated view which I have decided not to use*@
+        <<!--form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>-->
+            @*<div class="form-group">
+                <label asp-for="EmployeeId" class="control-label"></label>
+                <select asp-for="EmployeeId" class ="form-control" asp-items="ViewBag.Employee"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="EfficiencyCoef" class="control-label"></label>
+                <input asp-for="EfficiencyCoef" class="form-control" />
+                <span asp-validation-for="EfficiencyCoef" class="text-danger"></span>
+            </div>*@
+            <!--<div class="form-group">
+                <label asp-for="DateFrom" class="control-label"></label>
+                <input asp-for="DateFrom" class="form-control" />
+                <span asp-validation-for="DateFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateTo" class="control-label"></label>
+                <input asp-for="DateTo" class="form-control" />
+                <span asp-validation-for="DateTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>-->
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

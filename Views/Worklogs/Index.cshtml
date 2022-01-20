@@ -1,0 +1,53 @@
+﻿@model IEnumerable<NEWefficiencyTool.ModelsDB.Worklog>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Worklogs</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WorklogDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeSpent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Task)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorklogDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeSpent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.FirstLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Task.TaskId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.WorklogId">Edit</a> |
+                @*<a asp-action="Details" asp-route-id="@item.WorklogId">Details</a> |*@
+                <a asp-action="Delete" asp-route-id="@item.WorklogId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

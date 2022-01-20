@@ -1,0 +1,17 @@
+﻿
+@model NEWefficiencyTool.ModelsDB.Project
+@{
+    ViewData["Title"] = "TakenKey";
+}
+@*This view is displayed if the user enters a project key that is already taken*@
+<h1>Wrong project key</h1>
+<h4>You have entered a project key which is already taken</h4>
+
+<div>
+    <a asp-action="Create">Try again</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

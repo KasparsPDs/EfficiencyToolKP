@@ -1,9 +1,15 @@
 ﻿@{
-    ViewData["Title"] = "Sākums";
+    ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Sveicināti!</h1>
-    <p>Pieslēdzies sistēmai, lai sāktu darbu</p>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome</h1>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p>Welcome back! Use the navigation bar at the top to navigate and use the Employee Efficiency Tool.</p>
+    }
+    else
+    {
+        <p>Log in to use the Employee Efficiency Tool and view its data!</p>
+    }
 </div>
