@@ -1,13 +1,13 @@
-﻿using EfficiencyToolKPlocal.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NEWefficiencyTool.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EfficiencyToolKPlocal.Controllers
+namespace NEWefficiencyTool.Controllers
 {
     public class HomeController : Controller
     {
@@ -35,3 +35,4 @@ namespace EfficiencyToolKPlocal.Controllers
         }
     }
 }
+
