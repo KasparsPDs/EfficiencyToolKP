@@ -1,6 +1,6 @@
 using System;
 
-namespace EfficiencyToolKPlocal.Models
+namespace NEWefficiencyTool.Models
 {
     public class ErrorViewModel
     {
